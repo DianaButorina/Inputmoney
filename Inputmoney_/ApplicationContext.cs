@@ -9,6 +9,6 @@ namespace Inputmoney_
 {
     class ApplicationContext : DbContext
     {
-        public DbSet<User_cash> User_Cash { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }

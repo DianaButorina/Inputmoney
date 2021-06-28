@@ -31,12 +31,14 @@ namespace Inputmoney_
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string User = "Maria";
-            User_cash us = new User_cash();
+            User us = new User();
             int money = Convert.ToInt32(Money.Text);
             us.name = User;
             us.money = money;
-            db.User_Cash.Add(us);
+            MessageBox.Show("Деньги успешно добавлены");
+            db.User.Add(us);
             db.SaveChanges();
+
         }
     }
 }

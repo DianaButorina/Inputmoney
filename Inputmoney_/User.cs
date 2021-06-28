@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inputmoney_
 {
-    public class User_cash
+    public class User
     {
         public string name { get; set; }
         public int money { get; set; }

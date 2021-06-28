@@ -24,5 +24,10 @@ namespace Inputmoney_
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int money = Convert.ToInt32(Money.Text);
+        }
     }
 }

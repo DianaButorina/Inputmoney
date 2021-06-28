@@ -20,14 +20,23 @@ namespace Inputmoney_
     /// </summary>
     public partial class MainWindow : Window
     {
+        ApplicationContext db;
         public MainWindow()
         {
             InitializeComponent();
+            
+            db = new ApplicationContext();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string User = "Maria";
+            User_cash us = new User_cash();
             int money = Convert.ToInt32(Money.Text);
+            us.name = User;
+            us.money = money;
+            db.User_Cash.Add(us);
+            db.SaveChanges();
         }
     }
 }
